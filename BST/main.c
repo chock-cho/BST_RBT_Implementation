@@ -11,11 +11,13 @@ int main(void) {
 
     for (int i = 0; i < 10; i++) {
         treeInsert(BST, createNode(bst_nodeList[i]));
+        inOrderTreeWalk(BST->root);
+        printf("\n");
     }
     // BST 출력
     printf("초기 BST 중위 순회: ");
     inOrderTreeWalk(BST->root);
-    printf("\n\n");
+    printf("\n");
 
     printf("===============================\n");
     printf("BST insert 연산 진행\n");
@@ -27,7 +29,7 @@ int main(void) {
 
     printf("%d 삽입 후 BST 중위 순회: ", k1);
     inOrderTreeWalk(BST->root);
-    printf("\n\n");
+    printf("\n");
     
     printf("===============================\n");
     printf("BST delete 연산 진행\n");
